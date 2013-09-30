@@ -1,0 +1,17 @@
+<?php
+
+session_start();
+
+function checkLogin()
+{
+	if(isset($_SESSION['isLogin']) && $_SESSION['isLogin'])
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+}
+
+?>
