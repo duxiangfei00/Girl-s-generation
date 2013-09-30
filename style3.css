@@ -1,0 +1,329 @@
+body#page1 {
+font-style:italic;
+font-size:18px;
+color:#990033;
+margin: 0;
+}
+
+body#page2 {
+background-color:#FF9966;
+font:Geneva, Arial, Helvetica, sans-serif;
+font-size:18px;
+color:#FFFFFF;
+margin:auto;
+
+}
+h1#title1{
+font-family:"Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+color:#CCCC00;
+}
+body#page3 {
+font:Geneva, Arial, Helvetica, sans-serif;
+font-size:18px;
+background-color:#006666;
+color:#CCFF66;
+margin:auto;
+}
+body#page4 {
+font:Geneva, Arial, Helvetica, sans-serif;
+font-family:Geneva, Arial, Helvetica, sans-serif;
+font-size:18px;
+color:#FF0000;
+margin:auto;
+
+}
+table#table1{
+font-family:Verdana, Geneva, Tahoma, sans-serif;
+font-weight:bolder;
+margin:300px;
+background-color:#99FF33;
+
+}
+}
+body#page5 {
+font:status-bar;
+font-family:"Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+font-size:18px;
+background-color:#FF99CC;
+color:#FF0000;
+margin:auto;
+}
+body#page6 {
+font:Geneva, Arial, Helvetica, sans-serif;
+font-family:Geneva, Arial, Helvetica, sans-serif;
+font-size:18px;
+background-color:gray;
+color:#660033;
+margin:auto;
+
+}
+body#page7 {
+font:Geneva, Arial, Helvetica, sans-serif;
+font-family:Geneva, Arial, Helvetica, sans-serif;
+font-size:18px;
+background-color:#330033;
+color:#663399;
+margin:auto;
+}
+
+body#page8 {
+font:Geneva, Arial, Helvetica, sans-serif;
+font-family:"Baskerville Old Face";
+font-size:18px;
+background-color:#FFCCCC;
+color:#0000FF;
+margin:auto;
+}
+body#page9
+{
+background-image:url('Images/girlsforbackground3.jpg');
+	
+}
+
+
+p{
+ width:auto;
+ height:auto;
+
+ }
+header, #header{
+	text-align: center;
+	margin: 20px auto;
+	font-size: x-large;
+	font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+	line-height: normal;
+	color: #FF0000;
+}
+nav ul{
+	height: 100px;
+	padding: 0 30px;
+	margin: 0;
+	list-style-type:circle;
+}
+nav li{
+	height: 50px;
+	padding: 0;
+	margin: 0 5px 0 0;
+	float: left;
+	display:block;
+}
+nav li a{
+	background-position: center;
+	height: 20px;
+	display: block;
+	padding: 15px;
+	text-decoration: underline overline;
+	background-color: #CC6699;
+	color: #FF0000;
+	font-family: "Agency FB";
+	font-size: xx-large;
+	font-weight: bolder;
+	font-style: italic;
+	font-variant: small-caps;
+	text-transform: uppercase;
+	line-height: normal;
+	background-repeat: repeat-x;
+	background-attachment: fixed;
+	border-style:outset;
+	border-left-width:medium;
+	border-right-width:medium;
+}
+nav li a:link{
+	color: #333;
+}
+nav li a:visited{
+	color: #333;
+}
+nav li a:hover{
+	color: #fff;
+	/*background-color: #FFF;*/
+}
+nav li a:active{
+	background-color: #FFF;
+	color: #F30;
+}
+footer, #footer{
+	width: 1300px;
+	margin: 0 auto 50px auto;
+	font-size:16px;
+	color:#0033CC;
+	text-align:center;
+}
+
+nav{margin-top:20px;}
+
+#content{width:1024px; margin:0 auto;}
+.newStyle2 {
+	font-family: "Berlin Sans FB Demi";
+	font-size: x-large;
+	font-weight: bolder;
+	font-style: italic;
+	font-variant: small-caps;
+	text-transform: lowercase;
+}
+h1#h1.1{
+	
+	font-style:italic;
+}
+ img.loverain{
+ position:absolute; 
+ top:50%; 
+ left:50%; 
+ margin-top:-25px; 
+ margin-left:-25px;	
+}
+h3.loverain{
+	
+	position:absolute;
+}
+p.loverain{
+	
+	position:relative;
+}
+
+ul.default
+{
+	
+	border:medium;
+	border-style:outside;
+}
+
+
+.newStyle3 {
+	border: medium outset #FF99FF;
+}
+.newStyle4 {
+	font-weight: bold;
+	font-size: medium;
+	font-style: italic;
+	font-variant: small-caps;
+}
+.newStyle5 {
+	padding: 4cm;
+	margin: auto;
+	box-shadow: #FF66CC;
+}
+
+#cssmenu {
+  border: 5px solid #b9121b;
+  background: #b9121b;
+  font-size:large;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+#cssmenu > ul {
+  padding: 1px 0;
+  margin: 0px;
+  list-style: none;
+  width: 100%;
+  height: 21px;
+  border-top: 1px solid #FFFFFF;
+  border-bottom: 1px solid #FFFFFF;
+  font: normal 8pt verdana, arial, helvetica;
+}
+#cssmenu > ul li {
+  margin: 0;
+  padding: 0;
+  display: block;
+  float: left;
+  position: relative;
+  width: 148px;
+}
+#cssmenu > ul li a:link,
+#cssmenu > ul li a:visited {
+  padding: 4px 0;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  background: #b9121b;
+  color: #ffffff;
+  width: 148px;
+  height: 13px;
+}
+#cssmenu > ul li:hover a,
+#cssmenu > ul li a:hover,
+#cssmenu > ul li a:active {
+  padding: 4px 0;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  background: #ec454e;
+  color: #ffffff;
+  width: 146px;
+  height: 13px;
+  border-left: 1px solid #ffffff;
+  border-right: 1px solid #ffffff;
+}
+#cssmenu > ul li ul {
+  margin: 0;
+  padding: 1px 1px 0;
+  list-style: none;
+  display: none;
+  background: #ffffff;
+  width: 146px;
+  position: absolute;
+  top: 21px;
+  left: -1px;
+  border: 1px solid #b9121b;
+  border-top: none;
+}
+#cssmenu > ul li:hover ul {
+  display: block;
+}
+#cssmenu > ul li ul li {
+  clear: left;
+  width: 146px;
+}
+#cssmenu > ul li ul li a:link,
+#cssmenu > ul li ul li a:visited {
+  clear: left;
+  background: #b9121b;
+  padding: 4px 0;
+  width: 146px;
+  border: none;
+  border-bottom: 1px solid #ffffff;
+  position: relative;
+  z-index: 1000;
+}
+#cssmenu > ul li ul li:hover a,
+#cssmenu > ul li ul li a:active,
+#cssmenu > ul li ul li a:hover {
+  clear: left;
+  background: #ec454e;
+  padding: 4px 0;
+  width: 146px;
+  border: none;
+  border-bottom: 1px solid #ffffff;
+  position: relative;
+  z-index: 1000;
+}
+#cssmenu > ul li ul li ul.navigation-3 {
+  display: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: absolute;
+  left: 145px;
+  top: -2px;
+  padding: 1px 1px 0 1px;
+  border: 1px solid #b9121b;
+  border-left: 1px solid #b9121b;
+  background: #ffffff;
+  z-index: 900;
+}
+#cssmenu > ul li ul li:hover ul.navigation-3 {
+  display: block;
+}
+#cssmenu > ul li ul li ul.navigation-3 li a:link,
+#cssmenu > ul li ul li ul.navigation-3 li a:visited {
+  background: #b9121b;
+}
+#cssmenu > ul li ul li ul.navigation-3 li:hover a,
+#cssmenu > ul li ul li ul.navigation-3 li a:hover,
+#cssmenu > ul li ul li ul.navigation-3 li a:active {
+  background: #ec454e;
+}
+video
+{
+ margin: :300px;
+	
+}
