@@ -1,0 +1,93 @@
+<html>
+
+<head>
+<title>CANADAIN</title>
+</head>
+
+<body>
+<?php
+
+
+
+
+$complete = true;
+
+
+if (empty($_POST['store_name'])){
+	echo 'Enter your storename.<br />';
+	$complete = false;
+	}
+	
+	
+if (empty($_POST['address'])){
+	echo 'Enter your address.<br />';
+	$complete = false;
+	}
+
+	
+
+if (empty($_POST['manager'])){
+	echo 'Enter your manager.<br />';
+	$complete = false;
+	}
+
+if (empty($_POST['phone'])){
+	echo 'Enter your phone number.<br />';
+	$complete = false;
+	}
+
+	
+if ($complete){
+	
+	$sql = "INSERT INTO stores (store_name, address, phone,manager, photo) VALUES
+	('$_POST[store_name]','$_POST[address]', '$_POST[phone]', '$_POST[email]','$photo')";
+	mysqli_query($conn, $sql);
+	mysqli_close($conn);
+	
+	echo'your store has been saved';
+    header('Location: stores.php');
+}
+
+
+
+
+ $image_name = $_FILES['photo']['name'];
+
+ echo 'Image Name: ' . $image_name . '<br />';
+
+ //get the type of file 
+ $type = $_FILES['photo']['type'];
+ echo 'Type: ' . $type . '<br />';
+
+//see where the file got uploaded to in cache
+$temp_dir=$_FILES['photo']['tmp_name'];
+echo 'Temp Dir: ' . $temp_dir . '<br />';
+
+//set up a permanent directory path
+$target = 'images/' . $image_name;
+
+//copy the file out of cache to the permanent directory
+move_uploaded_file($temp_dir, $photo);
+
+//display the image back to the user 
+echo '<img src="' . $photo . '" width="200" />';
+/*echo "<img src= \"$target\" />"; */
+
+//now save to the database then showthe whole gallery
+$conn = mysqli_connect('webdesign4.georgianc.on.ca', 'db200223797', '891015', 'db200223797') or
+		die(mysqli_error());
+$sql = "INSERT INTO stores (photo) VALUES ( '$photo')";
+
+mysqli_query($conn,$sql) ;
+
+echo $sql;
+
+mysqli_close($conn);
+header('location: stores.php');
+
+
+
+?>
+</body>
+
+</html>
