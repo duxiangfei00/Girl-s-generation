@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>girl's generation</title>
+</head>
+
+<body>
+
+<?php
+require_once ('header.php');
+
+
+
+$conn = mysqli_connect('webdesign4.georgianc.on.ca', 'db200223797', '891015', 'db200223797') or die('Error connecting to MySQL server');
+
+
+$username = $_POST['username'];
+$password = sha1($_POST['password']);
+
+$sql = "SELECT id FROM admins WHERE username = '$username' AND password = '$password'";
+
+$result = mysqli_query($conn, $sql) or die('Error querying database.');
+
+$count = mysqli_num_rows($result);
+
+if ($count >= 1) {
+	echo 'Logged in Successfully.';	
+	header('location: display_users.php');
+}
+	
+else {
+	echo 'Invalid ID.  Click <a href="javascript:history.go(-1)">HERE</a> to go back.';
+	}
+
+
+
+mysqli_close($conn);
+require_once ('footer.php');
+?>
+
+</body>
+
+</html>
