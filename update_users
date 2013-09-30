@@ -1,0 +1,73 @@
+<?php
+require_once ('header.php');
+?>
+
+<html>
+<body>
+
+<?php
+
+
+
+$email = ($_POST['email']);
+
+
+$complete = true;
+
+
+if (empty($_POST['username'])){
+	echo 'Enter your username.<br />';
+	$complete = false;
+	}
+	
+
+if (empty($_POST['password'])){
+	echo 'Enter your password.<br />';
+	$complete = false;
+	}
+
+
+ $conn = mysqli_connect('webdesign4.georgianc.on.ca', 'db200223797', '891015', 'db200223797') or 
+ die('Could not connect: ' . mysqli_error());
+ $check_duplicate = "SELECT email FROM admins WHERE email = '$email'";
+ 
+ $result = mysqli_query($conn, $check_duplicate) or die('Error querying database.');
+ $records = mysqli_num_rows($result);
+ 
+ if ($records>=1) {
+  echo 'This mail has been already taken.';
+  $complete = false; 
+	}
+if (empty($_POST['email']) or !filter_var($email, FILTER_VALIDATE_EMAIL)){
+	exit("E-mail is not valid");
+	$complete = false;
+	}
+	
+if ($complete){
+
+
+
+   $conn = mysqli_connect('webdesign4.georgianc.on.ca', 'db200223797', '891015', 'db200223797') or die('Error connecting to MySQL server.');
+
+	$username = $_POST['username'];
+	$email = $_POST['email'];
+	$id = $_POST['id'];
+	
+	if (is_numeric($id)) {
+		$sql = "UPDATE admins SET email = '$email', username = '$username' WHERE id = $id";
+		mysqli_query($conn, $sql) or die('Error updating database.');
+		mysqli_close($conn);
+  
+		header('Location: display_users.php');
+	}
+	else {
+		echo 'Invalid ID.  Click <a href="javascript:history.go(-1)">HERE</a> to go back.';
+	}
+}
+
+?>
+</body>
+</html>
+<?php
+require_once ('footer.php');
+?>
